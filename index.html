@@ -1,41 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="el">
 <head>
-  <meta charset="utf-8">
-  <title>IT Solutions - stelios97.gr</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stelios IT Solutions</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>IT Solutions</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="about">
-      <h2>Welcome to IT Solutions</h2>
-      <p>We provide professional IT services, network solutions, automation systems, and camera surveillance for businesses and homes.</p>
-      <p>Contact us at: <strong>2104615568</strong></p>
-      <img src="images/office-placeholder.jpg" alt="IT Services" class="main-image">
-    </section>
+<header>
+    <div class="container">
+        <h1>Stelios IT Solutions</h1>
+        <nav>
+            <a href="#services">Υπηρεσίες</a>
+            <a href="#about">Σχετικά</a>
+            <a href="#contact">Επικοινωνία</a>
+        </nav>
+    </div>
+</header>
 
-    <section class="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Network solutions and maintenance</li>
-        <li>Automation systems for smart offices</li>
-        <li>Camera surveillance and security</li>
-        <li>Cloud services and data management</li>
-      </ul>
-    </section>
-  </main>
+<section class="hero">
+    <h2>Λύσεις Πληροφορικής για Επιχειρήσεις</h2>
+    <p>Δίκτυα, Servers, Web, Υποστήριξη & Cloud</p>
+    <a href="#contact" class="btn">Ζήτα Προσφορά</a>
+</section>
 
-  <footer>
-    <p>© 2026 IT Solutions | Tel: 2104615568</p>
-  </footer>
+<section id="services" class="section">
+    <h2>Υπηρεσίες</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Δίκτυα & Servers</h3>
+            <p>Εγκατάσταση και διαχείριση δικτύων, VPN, firewall.</p>
+        </div>
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Κατασκευή ιστοσελίδων και e-shop.</p>
+        </div>
+        <div class="card">
+            <h3>IT Support</h3>
+            <p>Τεχνική υποστήριξη απομακρυσμένα και onsite.</p>
+        </div>
+        <div class="card">
+            <h3>Cloud & Backup</h3>
+            <p>Ασφάλεια δεδομένων και cloud λύσεις.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section dark">
+    <h2>Ποιοι Είμαστε</h2>
+    <p>
+        Η Stelios IT Solutions παρέχει ολοκληρωμένες λύσεις πληροφορικής
+        για μικρές και μεσαίες επιχειρήσεις.
+    </p>
+</section>
+
+<section id="contact" class="section">
+    <h2>Επικοινωνία</h2>
+    <form>
+        <input type="text" placeholder="Ονοματεπώνυμο" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Μήνυμα"></textarea>
+        <button type="submit">Αποστολή</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Stelios IT Solutions</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
