@@ -22,11 +22,8 @@ body {
 }
 
 header {
-    position: sticky;
-    top: 0;
     background: rgba(0,0,0,0.7);
     backdrop-filter: blur(10px);
-    z-index: 100;
 }
 
 .container {
@@ -53,11 +50,7 @@ nav a {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 140px 20px;
-}
-
-.hero h2 {
-    font-size: 3rem;
+    padding: 150px 20px;
 }
 
 .btn {
@@ -68,7 +61,6 @@ nav a {
     color: white;
     text-decoration: none;
     border-radius: 30px;
-    font-weight: bold;
 }
 
 .section {
@@ -78,10 +70,6 @@ nav a {
     border-radius: 20px;
     padding: 70px 20px;
     text-align: center;
-}
-
-.section.dark {
-    background: rgba(255,255,255,0.12);
 }
 
 .grid {
@@ -95,6 +83,8 @@ nav a {
     background: rgba(255,255,255,0.1);
     padding: 30px;
     border-radius: 20px;
+    color: white;
+    text-decoration: none;
 }
 
 footer {
@@ -103,3 +93,5 @@ footer {
     background: rgba(0,0,0,0.7);
     margin-top: 40px;
 }
+
+
