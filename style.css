@@ -46,7 +46,9 @@ font-weight: bold;
 
 .hero {
 min-height: 100vh;
-background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("hero.png");
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("hero.png");
 background-size: cover;
 background-position: center;
 display: flex;
@@ -131,10 +133,22 @@ padding: 20px;
 background: rgba(0,0,0,0.7);
 margin-top: 40px;
 }
+
 .page-hero {
 min-height: 60vh;
-background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
+background-repeat: no-repeat;
 }
 
+.services-hero {
+background-image:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("service.png");
+}
+
+.contact-hero {
+background-image:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("contact.png");
+}
