@@ -120,17 +120,18 @@ footer {
     margin-top: 40px;
 }
 
-/* Logos section */
+/* Logos — πολύ μικρά */
 
 .logos {
     margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     justify-content: center;
 }
 
 .logos img {
-    height: 28px;
+    height: 20px;
     object-fit: contain;
+    opacity: 0.85;
 }
