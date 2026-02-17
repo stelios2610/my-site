@@ -120,6 +120,8 @@ footer {
     margin-top: 40px;
 }
 
+/* Logos section */
+
 .logos {
     margin-top: 15px;
     display: flex;
@@ -129,6 +131,6 @@ footer {
 }
 
 .logos img {
-    height: 40px;
+    height: 28px;
     object-fit: contain;
 }
