@@ -120,7 +120,7 @@ footer {
     margin-top: 40px;
 }
 
-/* Logos — safe size */
+/* Logos */
 
 .logos {
     margin-top: 15px;
@@ -131,9 +131,9 @@ footer {
 }
 
 .logos img {
-    height: 28px !important;
+    height: 32px !important;
     width: auto !important;
     max-width: none !important;
     object-fit: contain;
-    opacity: 0.9;
+    opacity: 0.95;
 }
