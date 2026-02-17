@@ -131,3 +131,10 @@ padding: 20px;
 background: rgba(0,0,0,0.7);
 margin-top: 40px;
 }
+.page-hero {
+min-height: 60vh;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
