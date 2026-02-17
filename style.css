@@ -148,7 +148,7 @@ url("service.png");
 }
 
 .contact-hero {
-min-height: 35vh;
+min-height: 30vh;
 background-image:
 linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url("contact.png");
