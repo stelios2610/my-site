@@ -113,11 +113,22 @@ nav a {
     background-position: center;
 }
 
-}
-
 footer {
     text-align: center;
     padding: 20px;
     background: rgba(0,0,0,0.7);
     margin-top: 40px;
+}
+
+.logos {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.logos img {
+    height: 40px;
+    object-fit: contain;
 }
