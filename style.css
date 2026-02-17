@@ -120,18 +120,20 @@ footer {
     margin-top: 40px;
 }
 
-/* Logos — ultra small */
+/* Logos — safe size */
 
 .logos {
     margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
     justify-content: center;
 }
 
 .logos img {
-    height: 14px;
+    height: 28px !important;
+    width: auto !important;
+    max-width: none !important;
     object-fit: contain;
-    opacity: 0.7;
+    opacity: 0.9;
 }
