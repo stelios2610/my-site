@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Επικοινωνία - FITSOlUTIONS</title>
+<title>Ζητήστε Προσφορά - FITSOLUTIONS</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,7 +11,7 @@
 
 <header>
 <div class="container">
-<h1>Stelios IT Solutions</h1>
+<h1>FITSOLUTIONS</h1>
 <nav>
 <a href="index.html">Αρχική</a>
 <a href="services.html">Υπηρεσίες</a>
@@ -19,21 +19,28 @@
 </div>
 </header>
 
-<section class="page-hero" style="
-background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('contact.png');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;">
-</section>
-
 <section class="section">
-<h2>Στοιχεία Επικοινωνίας</h2>
-<p><strong>Τηλέφωνο:</strong> 6947 308511</p>
-<p><strong>Email:</strong> info@stelios97.gr</p>
+
+<h2>Ζητήστε Προσφορά</h2>
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+<input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
+
+<input type="email" name="email" placeholder="Email" required>
+
+<input type="text" name="company" placeholder="Εταιρία">
+
+<textarea name="message" placeholder="Περιγράψτε το αίτημα σας" required></textarea>
+
+<button type="submit" class="btn">Αποστολή</button>
+
+</form>
+
 </section>
 
 <footer>
-<p>© 2026 FITSOlUTIONS</p>
+<p>© 2026 FITSOLUTIONS</p>
 </footer>
 
 </body>
