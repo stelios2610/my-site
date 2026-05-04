@@ -1,73 +1,232 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FITSOLUTIONS</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FITSOLUTIONS - Ολοκληρωμένες λύσεις πληροφορικής για επιχειρήσεις. Δίκτυα, Firewall, Servers, CCTV και IT Support.">
+  <title>FITSOLUTIONS – IT Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-<div class="container">
-<h1>FITSOLUTIONS</h1>
-<nav>
-<a href="services.html">Υπηρεσίες</a>
-<a href="contact.html">Επικοινωνία</a>
-</nav>
-</div>
+  <div class="container">
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-network-wired"></i>
+      <span>FITSOLUTIONS</span>
+    </a>
+    <nav id="nav">
+      <a href="index.html" class="active">Αρχική</a>
+      <a href="services.html">Υπηρεσίες</a>
+      <a href="contact.html">Επικοινωνία</a>
+      <a href="contact.html" class="btn btn-nav">Ζητήστε Προσφορά</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <section class="hero">
-<div class="hero-content">
-
-<h2>Ολοκληρωμένες Λύσεις Πληροφορικής</h2>
-<p>Υποδομές IT, ασφάλεια και τεχνική υποστήριξη επιχειρήσεων</p>
-
-<a href="services.html" class="btn">Δες Υπηρεσίες</a>
-<a href="contact.html" class="btn">Ζητήστε Προσφορά</a>
-
-</div>
+  <div class="hero-content fade-in">
+    <span class="badge"><i class="fa-solid fa-shield-halved"></i> Αξιόπιστη IT Υποστήριξη</span>
+    <h1>Ολοκληρωμένες<br>Λύσεις Πληροφορικής</h1>
+    <p>Υποδομές IT, ασφάλεια δικτύου και τεχνική υποστήριξη για επιχειρήσεις που δεν κάνουν εκπτώσεις στην ποιότητα.</p>
+    <div class="hero-btns">
+      <a href="services.html" class="btn">Δες τις Υπηρεσίες</a>
+      <a href="contact.html" class="btn btn-outline">Ζητήστε Προσφορά</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
 </section>
 
-<section class="section">
-<h2>Τεχνολογίες που Υποστηρίζουμε</h2>
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat-item">
+      <span class="stat-number">5+</span>
+      <span class="stat-label">Χρόνια Εμπειρίας</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">100+</span>
+      <span class="stat-label">Εγκαταστάσεις</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">50+</span>
+      <span class="stat-label">Ικανοποιημένοι Πελάτες</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">24/7</span>
+      <span class="stat-label">Τεχνική Υποστήριξη</span>
+    </div>
+  </div>
+</section>
 
-<div class="grid">
+<section class="section reveal">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" alt="IT Professional">
+      </div>
+      <div class="about-text">
+        <span class="badge"><i class="fa-solid fa-circle-info"></i> Ποιοι Είμαστε</span>
+        <h2>Εμπειρία που Κάνει τη Διαφορά</h2>
+        <p>Η FITSOLUTIONS παρέχει ολοκληρωμένες λύσεις πληροφορικής σε επιχειρήσεις κάθε μεγέθους. Με πάνω από 5 χρόνια εμπειρίας, γνωρίζουμε τι χρειάζεται κάθε επιχείρηση για να λειτουργεί αξιόπιστα και ασφαλώς.</p>
+        <p>Δεν είμαστε απλώς τεχνικοί υποστήριξης — είμαστε οι IT partners σας, προσφέροντας προληπτικές λύσεις που κρατούν την υποδομή σας ενημερωμένη και προστατευμένη.</p>
+        <ul class="about-points">
+          <li><i class="fa-solid fa-check"></i> Πιστοποιημένοι μηχανικοί δικτύων και ασφάλειας</li>
+          <li><i class="fa-solid fa-check"></i> Γρήγορη ανταπόκριση και on-site υποστήριξη</li>
+          <li><i class="fa-solid fa-check"></i> Εξατομικευμένες λύσεις για κάθε επιχείρηση</li>
+          <li><i class="fa-solid fa-check"></i> Διαφανής τιμολόγηση χωρίς κρυφές χρεώσεις</li>
+        </ul>
+        <a href="contact.html" class="btn">Μιλήστε με έναν Ειδικό</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h3>Firewall & Security</h3>
-<div class="logos">
-<img src="logos/watchguard-logo.jpg">
-<img src="logos/pfsense-logo-1024x538.png">
-<img src="logos/1280px-DrayTek_Logo.svg-1024x262.png">
-</div>
-</div>
+<section class="section reveal">
+  <div class="container">
+    <div class="section-header">
+      <h2>Οι Υπηρεσίες μας</h2>
+      <p>Παρέχουμε ολοκληρωμένες λύσεις IT για κάθε επιχείρηση</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-wifi"></i></div>
+        <h3>Δίκτυα & WiFi</h3>
+        <p>Σχεδιασμός και εγκατάσταση εταιρικών δικτύων, VPN, VLAN και ασύρματων υποδομών.</p>
+        <a href="services.html" class="card-link">Μάθε Περισσότερα <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Firewall & Cybersecurity</h3>
+        <p>Παραμετροποίηση WatchGuard, pfSense, DrayTek και εφαρμογή πολιτικών ασφάλειας.</p>
+        <a href="services.html" class="card-link">Μάθε Περισσότερα <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+        <h3>Servers & Virtualization</h3>
+        <p>Windows/Linux servers, Active Directory, Hyper-V και VMware virtualization.</p>
+        <a href="services.html" class="card-link">Μάθε Περισσότερα <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Backup & Disaster Recovery</h3>
+        <p>Backup λύσεις με Veeam, cloud προστασία και πλάνο αποκατάστασης από καταστροφές.</p>
+        <a href="services.html" class="card-link">Μάθε Περισσότερα <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-video"></i></div>
+        <h3>CCTV</h3>
+        <p>Εγκατάσταση και διαχείριση ολοκληρωμένων συστημάτων παρακολούθησης.</p>
+        <a href="services.html" class="card-link">Μάθε Περισσότερα <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-headset"></i></div>
+        <h3>IT Support</h3>
+        <p>Υποστήριξη, troubleshooting και συντήρηση υποδομών για αδιάλειπτη λειτουργία.</p>
+        <a href="services.html" class="card-link">Μάθε Περισσότερα <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h3>Networking & WiFi</h3>
-<div class="logos">
-<img src="logos/TP-Link-Logo-2003.png">
-<img src="logos/UniFi-Logo.jpg">
-<img src="logos/Zyxel_Logo.svg.png">
-</div>
-</div>
+<section class="section reveal">
+  <div class="container">
+    <div class="section-header">
+      <h2>Τεχνολογίες που Υποστηρίζουμε</h2>
+      <p>Δουλεύουμε με τις κορυφαίες λύσεις της αγοράς</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card tech-card">
+        <h3><i class="fa-solid fa-fire-flame-curved"></i> Firewall & Security</h3>
+        <div class="logos">
+          <img src="logos/watchguard-logo.jpg" alt="WatchGuard">
+          <img src="logos/pfsense-logo-1024x538.png" alt="pfSense">
+          <img src="logos/1280px-DrayTek_Logo.svg-1024x262.png" alt="DrayTek">
+        </div>
+      </div>
+      <div class="card tech-card">
+        <h3><i class="fa-solid fa-network-wired"></i> Networking & WiFi</h3>
+        <div class="logos">
+          <img src="logos/TP-Link-Logo-2003.png" alt="TP-Link">
+          <img src="logos/UniFi-Logo.jpg" alt="UniFi">
+          <img src="logos/Zyxel_Logo.svg.png" alt="Zyxel">
+        </div>
+      </div>
+      <div class="card tech-card">
+        <h3><i class="fa-solid fa-camera"></i> CCTV</h3>
+        <div class="logos">
+          <img src="logos/Hikvision-Logo.png" alt="Hikvision">
+          <img src="logos/dahua.png" alt="Dahua">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h3>CCTV</h3>
-<div class="logos">
-<img src="logos/Hikvision-Logo.png">
-<img src="logos/dahua.png">
-</div>
-</div>
-
-</div>
+<section class="cta-banner reveal">
+  <div class="container cta-inner">
+    <div class="cta-content">
+      <h2>Έτοιμοι να αναβαθμίσετε την IT υποδομή σας;</h2>
+      <p>Επικοινωνήστε μαζί μας για μια δωρεάν αξιολόγηση των αναγκών σας.</p>
+    </div>
+    <a href="contact.html" class="btn btn-white">Επικοινωνήστε Μαζί μας</a>
+  </div>
 </section>
 
 <footer>
-<p>© 2026 FITSOLUTIONS</p>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo">
+        <i class="fa-solid fa-network-wired"></i>
+        <span>FITSOLUTIONS</span>
+      </div>
+      <p>Ολοκληρωμένες λύσεις πληροφορικής για επιχειρήσεις.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Υπηρεσίες</h4>
+      <ul>
+        <li><a href="services.html">Δίκτυα & WiFi</a></li>
+        <li><a href="services.html">Firewall & Security</a></li>
+        <li><a href="services.html">Servers</a></li>
+        <li><a href="services.html">Backup</a></li>
+        <li><a href="services.html">CCTV</a></li>
+        <li><a href="services.html">IT Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Επικοινωνία</h4>
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-phone"></i> <a href="tel:6947308511">6947 308511</a></li>
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@fitsolutions.gr">info@fitsolutions.gr</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 FITSOLUTIONS. Με επιφύλαξη παντός δικαιώματος.</p>
+  </div>
 </footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
