@@ -1,51 +1,148 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Επικοινωνία - FITSOLUTIONS</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Επικοινωνήστε με την FITSOLUTIONS για IT υποστήριξη, δίκτυα και ολοκληρωμένες λύσεις πληροφορικής.">
+  <title>Επικοινωνία – FITSOLUTIONS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-<div class="container">
-<h1>FITSOLUTIONS</h1>
-<nav>
-<a href="index.html">Αρχική</a>
-<a href="services.html">Υπηρεσίες</a>
-</nav>
-</div>
+  <div class="container">
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-network-wired"></i>
+      <span>FITSOLUTIONS</span>
+    </a>
+    <nav id="nav">
+      <a href="index.html">Αρχική</a>
+      <a href="services.html">Υπηρεσίες</a>
+      <a href="contact.html" class="active">Επικοινωνία</a>
+      <a href="contact.html" class="btn btn-nav">Ζητήστε Προσφορά</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
-<section class="page-hero contact-hero"></section>
+<section class="page-hero contact-hero">
+  <div class="page-hero-content fade-in">
+    <span class="badge"><i class="fa-solid fa-envelope"></i> Επικοινωνία</span>
+    <h1>Ας Μιλήσουμε</h1>
+    <p>Είμαστε εδώ για να απαντήσουμε σε κάθε ερώτηση σας</p>
+  </div>
+</section>
 
-<section class="section">
+<section class="section reveal">
+  <div class="container">
+    <div class="contact-grid">
 
-<h2>Στοιχεία Επικοινωνίας</h2>
+      <div class="contact-info">
+        <h3>Στοιχεία Επικοινωνίας</h3>
 
-<p><strong>Κινητό:</strong> 6947 308511</p>
-<p><strong>Email:</strong> info@fitsolutions.gr</p>
+        <div class="contact-info-item">
+          <div class="icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Κινητό</div>
+            <a href="tel:6947308511">6947 308511</a>
+          </div>
+        </div>
 
-<h2 style="margin-top:30px;">Ζητήστε Προσφορά</h2>
+        <div class="contact-info-item">
+          <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Email</div>
+            <a href="mailto:info@fitsolutions.gr">info@fitsolutions.gr</a>
+          </div>
+        </div>
 
-<form action="https://formspree.io/f/xlgwavyy" method="POST">
+        <div class="contact-info-item">
+          <div class="icon"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Ώρες Λειτουργίας</div>
+            <span style="color:var(--text-muted);font-size:0.9rem;">Δευτ–Παρ: 09:00–18:00<br>Σάβ: 10:00–14:00</span>
+          </div>
+        </div>
 
-<input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
-<input type="email" name="email" placeholder="Email" required>
-<input type="text" name="company" placeholder="Εταιρία">
-<textarea name="message" placeholder="Περιγράψτε το αίτημα σας" required></textarea>
+        <div class="contact-info-item">
+          <div class="icon"><i class="fa-solid fa-headset"></i></div>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:2px;">Emergency Support</div>
+            <span style="color:var(--text-muted);font-size:0.9rem;">24/7 για συμφωνημένες εταιρίες</span>
+          </div>
+        </div>
+      </div>
 
-<button type="submit" class="btn">Αποστολή</button>
+      <div>
+        <p class="form-title">Ζητήστε Προσφορά</p>
+        <form action="https://formspree.io/f/xlgwavyy" method="POST">
+          <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="company" placeholder="Εταιρία (προαιρετικό)">
+          <input type="tel" name="phone" placeholder="Τηλέφωνο (προαιρετικό)">
+          <textarea name="message" placeholder="Περιγράψτε το αίτημα σας..." required></textarea>
+          <button type="submit" class="btn" style="align-self:flex-start;">
+            <i class="fa-solid fa-paper-plane"></i> Αποστολή
+          </button>
+        </form>
+      </div>
 
-</form>
-
+    </div>
+  </div>
 </section>
 
 <footer>
-<p>© 2026 FITSOLUTIONS</p>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo">
+        <i class="fa-solid fa-network-wired"></i>
+        <span>FITSOLUTIONS</span>
+      </div>
+      <p>Ολοκληρωμένες λύσεις πληροφορικής για επιχειρήσεις.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Υπηρεσίες</h4>
+      <ul>
+        <li><a href="services.html">Δίκτυα & WiFi</a></li>
+        <li><a href="services.html">Firewall & Security</a></li>
+        <li><a href="services.html">Servers</a></li>
+        <li><a href="services.html">Backup</a></li>
+        <li><a href="services.html">CCTV</a></li>
+        <li><a href="services.html">IT Support</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Επικοινωνία</h4>
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-phone"></i> <a href="tel:6947308511">6947 308511</a></li>
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@fitsolutions.gr">info@fitsolutions.gr</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 FITSOLUTIONS. Με επιφύλαξη παντός δικαιώματος.</p>
+  </div>
 </footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
