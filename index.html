@@ -41,6 +41,7 @@
   </script>
 </head>
 <body>
+<a href="#main" class="skip-link">Μετάβαση στο περιεχόμενο</a>
 
 <header>
   <div class="container">
@@ -54,13 +55,13 @@
       <a href="contact.html">Επικοινωνία</a>
       <a href="contact.html" class="btn btn-nav">Ζητήστε Προσφορά</a>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<section class="hero">
+<section id="main" class="hero">
   <div class="hero-content fade-in">
     <span class="badge"><i class="fa-solid fa-shield-halved"></i> Αξιόπιστη IT Υποστήριξη</span>
     <h1>Ολοκληρωμένες<br>Λύσεις Πληροφορικής</h1>
@@ -80,7 +81,7 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap">
-        <img src="img/about.webp" alt="IT Professional" loading="lazy">
+        <img src="img/about.webp" alt="IT Professional" width="1000" height="668" loading="lazy">
       </div>
       <div class="about-text">
         <span class="badge"><i class="fa-solid fa-circle-info"></i> Ποιοι Είμαστε</span>
@@ -156,33 +157,33 @@
       <div class="card tech-card">
         <h3><i class="fa-solid fa-wifi"></i> Δίκτυα & WiFi</h3>
         <div class="logos">
-          <img src="logos/UniFi-Logo.jpg" alt="UniFi">
-          <img src="logos/TP-Link-Logo-2003.png" alt="TP-Link">
+          <img src="logos/UniFi-Logo.jpg" alt="UniFi" loading="lazy">
+          <img src="logos/TP-Link-Logo-2003.png" alt="TP-Link" loading="lazy">
         </div>
       </div>
       <div class="card tech-card">
         <h3><i class="fa-solid fa-shield-halved"></i> Firewall & Security</h3>
         <div class="logos">
-          <img src="logos/watchguard-logo.jpg" alt="WatchGuard">
-          <img src="logos/pfsense-logo-1024x538.png" alt="pfSense">
-          <img src="logos/logo.png" alt="OPNsense">
-          <img src="logos/1280px-DrayTek_Logo.svg-1024x262.png" alt="DrayTek">
-          <img src="logos/Zyxel_Logo.svg.png" alt="Zyxel">
-          <img src="logos/R.jpg" alt="Cisco">
-          <img src="logos/542688.jpg" alt="Fortinet">
+          <img src="logos/watchguard-logo.jpg" alt="WatchGuard" loading="lazy">
+          <img src="logos/pfsense-logo-1024x538.png" alt="pfSense" loading="lazy">
+          <img src="logos/logo.png" alt="OPNsense" loading="lazy">
+          <img src="logos/1280px-DrayTek_Logo.svg-1024x262.png" alt="DrayTek" loading="lazy">
+          <img src="logos/Zyxel_Logo.svg.png" alt="Zyxel" loading="lazy">
+          <img src="logos/R.jpg" alt="Cisco" loading="lazy">
+          <img src="logos/542688.jpg" alt="Fortinet" loading="lazy">
         </div>
       </div>
       <div class="card tech-card">
         <h3><i class="fa-solid fa-video"></i> CCTV</h3>
         <div class="logos">
-          <img src="logos/Hikvision-Logo.png" alt="Hikvision">
-          <img src="logos/dahua.png" alt="Dahua">
+          <img src="logos/Hikvision-Logo.png" alt="Hikvision" loading="lazy">
+          <img src="logos/dahua.png" alt="Dahua" loading="lazy">
         </div>
       </div>
       <div class="card tech-card">
         <h3><i class="fa-solid fa-cloud-arrow-up"></i> Backup</h3>
         <div class="logos">
-          <img src="logos/OIP.webp" alt="Veeam">
+          <img src="logos/OIP.webp" alt="Veeam" loading="lazy">
         </div>
       </div>
     </div>
@@ -240,8 +241,9 @@
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('nav');
   hamburger.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    const isOpen = nav.classList.toggle('open');
     hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
   });
 
   const observer = new IntersectionObserver((entries) => {

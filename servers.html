@@ -24,6 +24,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
+<a href="#main" class="skip-link">Μετάβαση στο περιεχόμενο</a>
 
 <header>
   <div class="container">
@@ -37,13 +38,13 @@
       <a href="contact.html">Επικοινωνία</a>
       <a href="contact.html" class="btn btn-nav">Ζητήστε Προσφορά</a>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
+    <button class="hamburger" id="hamburger" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<section class="page-hero" style="min-height:42vh;">
+<section id="main" class="page-hero" style="min-height:42vh;">
   <div class="page-hero-content fade-in">
     <span class="badge"><i class="fa-solid fa-server"></i> Υπηρεσία</span>
     <h1>Servers & Virtualization</h1>
@@ -65,7 +66,7 @@
         <a href="contact.html" class="btn">Ζητήστε Προσφορά</a>
       </div>
       <div class="about-img-wrap">
-        <img src="img/about.webp" alt="Server infrastructure" loading="lazy">
+        <img src="img/about.webp" alt="Server infrastructure" width="1000" height="668" loading="lazy">
       </div>
     </div>
   </div>
@@ -122,8 +123,9 @@
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('nav');
   hamburger.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    const isOpen = nav.classList.toggle('open');
     hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
   });
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
