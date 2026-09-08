@@ -11,23 +11,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="preview-bar">ΜΑΚΕΤΑ ΠΡΟΤΑΣΗΣ — δεν είναι το live site. Δεν αλλάζει τίποτα στο fitsolutions.gr μέχρι να το εγκρίνεις.</div>
-
+  <div class="preview-bar">ΜΑΚΕΤΑ</div>
   <header>
     <div class="wrap">
       <a class="brand" href="index.html">
-        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
-          <rect width="36" height="36" rx="10" fill="#2ec8e0"/>
-          <path d="M10 11h16v3.2H14.6V17h9.2v3.1H14.6V25H10V11z" fill="#061016"/>
+        <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true">
+          <path fill="#2ad4e8" d="M3 7h18.5v4.2H8.6v4.6h11.2v3.9H8.6V31H3V7z"/>
+          <path fill="#ffffff" opacity="0.92" d="M13 11h18.5v4.2H18.6v4.2h10.4v3.8H18.6V33H13V11z"/>
         </svg>
         <span>FITSOLUTIONS</span>
       </a>
-      <nav>
-        <a href="index.html" class="on">Αρχική</a>
+      <nav id="nav">
         <a href="#services">Υπηρεσίες</a>
-        <a href="contact.html">Επικοινωνία</a>
-        <a class="btn" href="contact.html">Ζητήστε προσφορά</a>
+        <a href="#solutions">Λύσεις</a>
+        <a href="#why">Γιατί εμάς</a>
+        <a href="#clients">Πελάτες</a>
+        <a href="#why">Εταιρεία</a>
+        <a class="btn-gold" href="contact.html">Επικοινωνία</a>
       </nav>
+      <button class="hamburger" id="hamburger" aria-label="Μενού" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </div>
   </header>
 
@@ -40,26 +42,25 @@
     </div>
     <div class="wrap">
       <span class="live-pill"><span class="live-dot" aria-hidden="true"></span> LIVE · αποδεχόμαστε νέα έργα</span>
-      <span class="kicker"><i class="fa-solid fa-location-dot"></i> On-site & remote · Ελλάδα</span>
-      <h1>IT που κρατά την επιχείρηση <em>σε λειτουργία</em></h1>
+      <h1>IT που <em>κρατά την επιχείρηση</em> σε λειτουργία</h1>
       <p class="lead">Δίκτυα, firewall, servers, backup και καθημερινή υποστήριξη για γραφεία και μικρομεσαίες επιχειρήσεις — χωρίς ακαταλαβίστικη ορολογία και χωρίς κρυφές χρεώσεις.</p>
       <div class="hero-actions">
-        <a class="btn" href="#services">Δείτε τις υπηρεσίες</a>
-        <a class="btn btn-ghost" href="contact.html">Δωρεάν αξιολόγηση</a>
+        <a class="btn" href="#services">Οι υπηρεσίες μας →</a>
+        <a class="btn btn-ghost" href="contact.html">Μιλήστε με ειδικό</a>
       </div>
     </div>
     <button class="vid-toggle" type="button" id="vidToggle" aria-pressed="false">Παύση video</button>
   </section>
 
   <main class="wrap">
-    <div class="trust" style="margin-top:28px;">
-      <div><b>5+ έτη</b><span>σε εταιρικά δίκτυα & ασφάλεια</span></div>
-      <div><b>Ελλάδα</b><span>on-site όπου χρειάζεται, αλλιώς remote</span></div>
-      <div><b>Διαφάνεια</b><span>τιμή πριν την εργασία, όχι μετά</span></div>
-      <div><b>24/7</b><span>emergency για συμφωνημένες εταιρίες</span></div>
+    <div class="trust">
+      <div><i class="fa-solid fa-shield-halved"></i><b>5+ έτη</b><span>Εμπειρία στην IT</span></div>
+      <div><i class="fa-solid fa-location-dot"></i><b>Ελλάδα</b><span>On-site & remote</span></div>
+      <div><i class="fa-solid fa-eye"></i><b>Διαφάνεια</b><span>Τιμές και όροι ξεκάθαροι</span></div>
+      <div><i class="fa-solid fa-clock"></i><b>24/7</b><span>Για συμφωνημένες εταιρίες</span></div>
     </div>
 
-    <section>
+    <section id="why">
       <div class="split">
         <img src="../img/about.webp" alt="IT υποδομή">
         <div>
@@ -80,49 +81,49 @@
     <section id="services">
       <div class="sec-h center">
         <h2>Υπηρεσίες</h2>
-        <p>Έξι τομείς, ένα σημείο ευθύνης. Πατάτε και βλέπετε τι περιλαμβάνει το καθένα.</p>
+        <p>Έξι τομείς, ένα σημείο ευθύνης.</p>
       </div>
       <div class="grid-6">
         <article class="card">
           <div class="icon"><i class="fa-solid fa-wifi"></i></div>
           <h3>Δίκτυα & Wi‑Fi</h3>
-          <p>Καλωδίωση, VLAN, VPN και εταιρικό Wi‑Fi που αντέχει πολλούς χρήστες χωρίς «νεκρές ζώνες».</p>
+          <p>Καλωδίωση, VLAN, VPN και εταιρικό Wi‑Fi χωρίς νεκρές ζώνες.</p>
           <p class="for">Για γραφεία, καταστήματα, αποθήκες</p>
         </article>
         <article class="card">
           <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
           <h3>Firewall & ασφάλεια</h3>
-          <p>WatchGuard, pfSense, DrayTek, Fortinet: πολιτικές, VPN χρηστών και έλεγχος τι μπαίνει στο δίκτυο.</p>
-          <p class="for">Για όσους έχουν απομακρυσμένους υπαλλήλους ή POS</p>
+          <p>WatchGuard, pfSense, DrayTek, Fortinet και πολιτικές πρόσβασης.</p>
+          <p class="for">Για remote χρήστες ή POS</p>
         </article>
         <article class="card">
           <div class="icon"><i class="fa-solid fa-server"></i></div>
           <h3>Servers</h3>
-          <p>Windows / Linux, Active Directory, Hyper‑V και VMware. Καθαρή δομή χρηστών και δικαιωμάτων.</p>
-          <p class="for">Για εταιρίες που μεγάλωσαν από «έναν κοινόχρηστο φάκελο»</p>
+          <p>Windows / Linux, Active Directory, Hyper‑V και VMware.</p>
+          <p class="for">Όταν ο κοινόχρηστος φάκελος δεν φτάνει</p>
         </article>
         <article class="card">
           <div class="icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
           <h3>Backup</h3>
-          <p>Veeam και cloud αντίγραφα με δοκιμή επαναφοράς — backup που δεν ανακαλύπτετε ότι είναι άδειο την ημέρα της βλάβης.</p>
-          <p class="for">Για λογιστήρια, φακέλους πελατών, ERP</p>
+          <p>Veeam και cloud με δοκιμή επαναφοράς, όχι «ελπίζουμε να δουλεύει».</p>
+          <p class="for">Για λογιστήρια, φακέλους, ERP</p>
         </article>
         <article class="card">
           <div class="icon"><i class="fa-solid fa-video"></i></div>
           <h3>CCTV</h3>
-          <p>Hikvision / Dahua: σωστή κάλυψη χώρου, αποθήκευση και απομακρυσμένη θέαση.</p>
-          <p class="for">Για καταστήματα, αποθήκες, εισόδους</p>
+          <p>Hikvision / Dahua: κάλυψη, αποθήκευση και απομακρυσμένη θέαση.</p>
+          <p class="for">Για καταστήματα και εισόδους</p>
         </article>
         <article class="card">
           <div class="icon"><i class="fa-solid fa-headset"></i></div>
           <h3>IT Support</h3>
-          <p>On-site και remote. Συντήρηση, βλάβες, ενημερώσεις — ώστε να μην είστε εσείς το helpdesk.</p>
-          <p class="for">Για σταθερή μηνιαία κάλυψη</p>
+          <p>On-site και remote συντήρηση, ώστε να μην είστε εσείς το helpdesk.</p>
+          <p class="for">Για μηνιαία κάλυψη</p>
         </article>
       </div>
     </section>
 
-    <section>
+    <section id="solutions">
       <div class="sec-h center">
         <h2>Πώς δουλεύουμε</h2>
         <p>Τέσσερα βήματα, χωρίς εκπλήξεις στο τιμολόγιο.</p>
@@ -130,15 +131,15 @@
       <div class="grid-4">
         <div class="card step"><em>01</em><h3>Σύντομη κλήση</h3><p>Τι σας πονάει σήμερα: δίκτυο, ασφάλεια, backup ή όλα μαζί.</p></div>
         <div class="card step"><em>02</em><h3>Αξιολόγηση</h3><p>On-site ή remote εικόνα της υφιστάμενης υποδομής.</p></div>
-        <div class="card step"><em>03</em><h3>Πρόταση</h3><p>Υλικό, εργασία, χρονοδιάγραμμα. Υπογράφετε πριν αγοραστεί οτιδήποτε.</p></div>
-        <div class="card step"><em>04</em><h3>Παράδοση & support</h3><p>Εγκατάσταση, τεκμηρίωση και συμφωνία συντήρησης αν τη θέλετε.</p></div>
+        <div class="card step"><em>03</em><h3>Πρόταση</h3><p>Υλικό, εργασία, χρονοδιάγραμμα πριν αγοραστεί οτιδήποτε.</p></div>
+        <div class="card step"><em>04</em><h3>Παράδοση</h3><p>Εγκατάσταση, τεκμηρίωση και support αν το θέλετε.</p></div>
       </div>
     </section>
 
-    <section>
+    <section id="clients">
       <div class="sec-h center">
         <h2>Τεχνολογίες που εγκαθιστούμε</h2>
-        <p>Λιγότερα λογότυπα, πιο καθαρά — μόνο brands που πραγματικά δουλεύουμε.</p>
+        <p>Λιγότερα λογότυπα, πιο καθαρά. Τα πραγματικά logos πελατών μπαίνουν εδώ όταν τα έχεις.</p>
       </div>
       <div class="logos">
         <figure><img src="../logos/UniFi-Logo.jpg" alt="UniFi"></figure>
@@ -154,12 +155,9 @@
       <div class="cta">
         <div>
           <h2>Θέλετε μια καθαρή εικόνα της υποδομής σας;</h2>
-          <p>Στείλτε δύο γραμμές για το πρόβλημα. Απαντάμε εργάσιμες στο τηλέφωνο, email ή WhatsApp.</p>
+          <p>Στείλτε δύο γραμμές. Απαντάμε εργάσιμες στο τηλέφωνο, email ή WhatsApp.</p>
         </div>
-        <div class="hero-actions">
-          <a class="btn" href="contact.html">Φόρμα επικοινωνίας</a>
-          <a class="btn btn-wa" href="https://wa.me/306947308511"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-        </div>
+        <a class="btn" href="contact.html">Επικοινωνία</a>
       </div>
     </section>
   </main>
@@ -169,7 +167,7 @@
       <div class="foot">
         <div>
           <div class="brand" style="margin-bottom:10px;color:#fff;">
-            <svg width="28" height="28" viewBox="0 0 36 36"><rect width="36" height="36" rx="10" fill="#2ec8e0"/><path d="M10 11h16v3.2H14.6V17h9.2v3.1H14.6V25H10V11z" fill="#061016"/></svg>
+            <svg width="28" height="28" viewBox="0 0 38 38"><path fill="#2ad4e8" d="M3 7h18.5v4.2H8.6v4.6h11.2v3.9H8.6V31H3V7z"/><path fill="#fff" d="M13 11h18.5v4.2H18.6v4.2h10.4v3.8H18.6V33H13V11z"/></svg>
             FITSOLUTIONS
           </div>
           IT υποδομές για επιχειρήσεις στην Ελλάδα.
@@ -177,8 +175,7 @@
         <div>
           <h4>Επικοινωνία</h4>
           <p><a href="tel:6947308511">6947 308 511</a><br>
-          <a href="mailto:info@fitsolutions.gr">info@fitsolutions.gr</a><br>
-          Δευτ–Παρ 09:00–18:00 · Σάβ 10:00–14:00</p>
+          <a href="mailto:info@fitsolutions.gr">info@fitsolutions.gr</a></p>
         </div>
         <div>
           <h4>Νομικά</h4>
@@ -189,8 +186,14 @@
     </div>
   </footer>
 
-  <a class="btn btn-wa wa-float" href="https://wa.me/306947308511" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a class="wa-float" href="https://wa.me/306947308511" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
   <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
     const video = document.getElementById('heroVideo');
     const toggle = document.getElementById('vidToggle');
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches && video) {

@@ -11,73 +11,98 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="preview-bar">ΜΑΚΕΤΑ ΠΡΟΤΑΣΗΣ — φόρμα επικοινωνίας με GDPR. Δεν είναι το live site.</div>
+  <div class="preview-bar">ΜΑΚΕΤΑ</div>
   <header>
     <div class="wrap">
       <a class="brand" href="index.html">
-        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
-          <rect width="36" height="36" rx="10" fill="#2ec8e0"/>
-          <path d="M10 11h16v3.2H14.6V17h9.2v3.1H14.6V25H10V11z" fill="#061016"/>
+        <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true">
+          <path fill="#2ad4e8" d="M3 7h18.5v4.2H8.6v4.6h11.2v3.9H8.6V31H3V7z"/>
+          <path fill="#ffffff" opacity="0.92" d="M13 11h18.5v4.2H18.6v4.2h10.4v3.8H18.6V33H13V11z"/>
         </svg>
         <span>FITSOLUTIONS</span>
       </a>
-      <nav>
-        <a href="index.html">Αρχική</a>
+      <nav id="nav">
         <a href="index.html#services">Υπηρεσίες</a>
-        <a href="contact.html" class="on">Επικοινωνία</a>
-        <a class="btn" href="contact.html">Ζητήστε προσφορά</a>
+        <a href="index.html#solutions">Λύσεις</a>
+        <a href="index.html#why">Γιατί εμάς</a>
+        <a href="index.html#clients">Πελάτες</a>
+        <a href="index.html#why">Εταιρεία</a>
+        <a class="btn-gold" href="contact.html">Επικοινωνία</a>
       </nav>
+      <button class="hamburger" id="hamburger" aria-label="Μενού" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </div>
   </header>
 
-  <section class="hero-live short">
-    <div class="hero-media">
-      <video autoplay muted loop playsinline poster="../img/contact-hero.webp" aria-hidden="true">
-        <source src="media/hero-loop.mp4" type="video/mp4">
-      </video>
-      <img src="../img/contact-hero.webp" alt="">
-    </div>
-    <div class="wrap">
-      <span class="live-pill"><span class="live-dot" aria-hidden="true"></span> LIVE</span>
-      <span class="kicker"><i class="fa-solid fa-envelope"></i> Επικοινωνία</span>
-      <h1>Πείτε μας τι δεν δουλεύει</h1>
-      <p class="lead">Δύο γραμμές αρκούν. Αν είναι επείγον, καλέστε ή στείλτε WhatsApp — η φόρμα είναι για προσφορές και νέα έργα.</p>
-    </div>
-  </section>
-
-  <main class="wrap">
-    <section>
-      <div class="contact-grid">
-        <div>
-          <div class="info-row"><i class="fa-solid fa-phone"></i><div><strong style="color:#fff;">6947 308 511</strong><br>Δευτ–Παρ 09:00–18:00</div></div>
-          <div class="info-row"><i class="fa-brands fa-whatsapp"></i><div><a href="https://wa.me/306947308511">WhatsApp</a><br>Γρήγορα για βλάβες / ραντεβού</div></div>
-          <div class="info-row"><i class="fa-solid fa-envelope"></i><div><a href="mailto:info@fitsolutions.gr">info@fitsolutions.gr</a></div></div>
-          <div class="info-row"><i class="fa-solid fa-location-dot"></i><div>On-site όπου συμφωνηθεί · αλλιώς remote σε όλη την Ελλάδα</div></div>
+  <main class="page-contact">
+    <div class="wrap contact-layout">
+      <div class="contact-copy">
+        <h1 class="page-h1">Πείτε μας τι δεν δουλεύει</h1>
+        <p class="lead">Η ομάδα μας είναι εδώ για να ακούσει, να κατανοήσει και να βρει τη λύση που ταιριάζει στην επιχείρησή σας.</p>
+        <div class="ico-list">
+          <div class="ico-row">
+            <div class="ico"><i class="fa-solid fa-phone"></i></div>
+            <div><strong>Τηλέφωνο</strong><a href="tel:6947308511">6947 308 511</a></div>
+          </div>
+          <div class="ico-row">
+            <div class="ico"><i class="fa-brands fa-whatsapp"></i></div>
+            <div><strong>WhatsApp</strong><a href="https://wa.me/306947308511">6947 308 511</a></div>
+          </div>
+          <div class="ico-row">
+            <div class="ico"><i class="fa-solid fa-envelope"></i></div>
+            <div><strong>Email</strong><a href="mailto:info@fitsolutions.gr">info@fitsolutions.gr</a></div>
+          </div>
+          <div class="ico-row">
+            <div class="ico"><i class="fa-solid fa-location-dot"></i></div>
+            <div><strong>On-site Υποστήριξη</strong><span>Εξυπηρετούμε όλη την Ελλάδα</span></div>
+          </div>
         </div>
-        <form action="#" method="post" onsubmit="event.preventDefault(); alert('Μακέτα: η φόρμα δεν στέλνει ακόμα.');">
-          <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="text" name="company" placeholder="Εταιρία (προαιρετικό)">
-          <input type="tel" name="phone" placeholder="Τηλέφωνο">
-          <select name="need">
-            <option value="">Τι σας απασχολεί;</option>
-            <option>Δίκτυο / Wi‑Fi</option>
-            <option>Firewall / ασφάλεια</option>
-            <option>Servers</option>
-            <option>Backup</option>
-            <option>CCTV</option>
-            <option>Μηνιαίο IT support</option>
-            <option>Άλλο</option>
-          </select>
-          <textarea name="message" placeholder="Π.χ. «Το Wi‑Fi πέφτει στο πίσω γραφείο, 12 άτομα, θέλουμε προσφορά.»" required></textarea>
-          <label class="gdpr">
-            <input type="checkbox" required>
-            <span>Συμφωνώ με την <a href="privacy.html" style="color:#2ec8e0;">πολιτική απορρήτου</a>. Τα στοιχεία χρησιμοποιούνται μόνο για απάντηση στο αίτημα.</span>
-          </label>
-          <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Αποστολή</button>
-        </form>
       </div>
-    </section>
+
+      <form class="form-card" action="#" method="post" onsubmit="event.preventDefault(); alert('Μακέτα: η φόρμα δεν στέλνει ακόμα.');">
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-name">Ονοματεπώνυμο</label>
+            <input id="f-name" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="f-company">Εταιρεία</label>
+            <input id="f-company" name="company" type="text">
+          </div>
+          <div class="field">
+            <label for="f-phone">Τηλέφωνο</label>
+            <input id="f-phone" name="phone" type="tel">
+          </div>
+          <div class="field full">
+            <label for="f-need">Τι σας απασχολεί;</label>
+            <select id="f-need" name="need">
+              <option value="">Επιλέξτε μια κατηγορία</option>
+              <option>Δίκτυο / Wi‑Fi</option>
+              <option>Firewall / ασφάλεια</option>
+              <option>Servers</option>
+              <option>Backup</option>
+              <option>CCTV</option>
+              <option>Μηνιαίο IT support</option>
+              <option>Άλλο</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="f-message">Περιγράψτε το πρόβλημα ή την ερώτησή σας</label>
+            <textarea id="f-message" name="message" required></textarea>
+          </div>
+          <label class="gdpr full">
+            <input type="checkbox" required>
+            <span>Συμφωνώ με την <a href="privacy.html">πολιτική απορρήτου</a></span>
+          </label>
+          <div class="field full">
+            <button class="btn btn-wide" type="submit"><i class="fa-solid fa-paper-plane"></i> Αποστολή</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </main>
 
   <footer>
@@ -85,5 +110,15 @@
       <p class="copy">© 2026 FITSOLUTIONS · Μακέτα για έγκριση · <a href="privacy.html">Απόρρητο</a></p>
     </div>
   </footer>
+
+  <a class="wa-float" href="https://wa.me/306947308511" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+  </script>
 </body>
 </html>
