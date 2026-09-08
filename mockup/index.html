@@ -35,7 +35,7 @@
 
   <section class="hero-live">
     <div class="hero-media">
-      <video id="heroVideo" autoplay muted loop playsinline poster="../img/hero.webp" aria-hidden="true">
+      <video id="heroVideo" data-autoplay autoplay muted loop playsinline preload="auto" poster="../img/hero.webp" aria-hidden="true">
         <source src="media/hero-loop.mp4" type="video/mp4">
       </video>
       <img src="../img/hero.webp" alt="">
@@ -212,5 +212,6 @@
       }
     });
   </script>
+  <script src="play-video.js"></script>
 </body>
 </html>

@@ -10,7 +10,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="has-page-video">
+  <div class="page-bg-video" aria-hidden="true">
+    <video data-autoplay autoplay muted loop playsinline preload="auto" poster="../img/contact-hero.webp">
+      <source src="media/hero-loop.mp4" type="video/mp4">
+    </video>
+    <img src="../img/contact-hero.webp" alt="">
+  </div>
   <div class="preview-bar">ΜΑΚΕΤΑ</div>
   <header>
     <div class="wrap">
@@ -36,6 +42,7 @@
   <main class="page-contact">
     <div class="wrap contact-layout">
       <div class="contact-copy">
+        <span class="live-pill"><span class="live-dot" aria-hidden="true"></span> LIVE</span>
         <h1 class="page-h1">Πείτε μας τι δεν δουλεύει</h1>
         <p class="lead">Η ομάδα μας είναι εδώ για να ακούσει, να κατανοήσει και να βρει τη λύση που ταιριάζει στην επιχείρησή σας.</p>
         <div class="ico-list">
@@ -120,5 +127,6 @@
       hamburger.setAttribute('aria-expanded', open);
     });
   </script>
+  <script src="play-video.js"></script>
 </body>
 </html>
