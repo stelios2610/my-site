@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Μακέτα – FITSOLUTIONS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="preview-bar">ΜΑΚΕΤΑ ΠΡΟΤΑΣΗΣ — δεν είναι το live site. Δεν αλλάζει τίποτα στο fitsolutions.gr μέχρι να το εγκρίνεις.</div>
+
+  <header>
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <rect width="36" height="36" rx="10" fill="#2ec8e0"/>
+          <path d="M10 11h16v3.2H14.6V17h9.2v3.1H14.6V25H10V11z" fill="#061016"/>
+        </svg>
+        <span>FITSOLUTIONS</span>
+      </a>
+      <nav>
+        <a href="index.html" class="on">Αρχική</a>
+        <a href="#services">Υπηρεσίες</a>
+        <a href="contact.html">Επικοινωνία</a>
+        <a class="btn" href="contact.html">Ζητήστε προσφορά</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-live">
+    <div class="hero-media">
+      <video id="heroVideo" autoplay muted loop playsinline poster="../img/hero.webp" aria-hidden="true">
+        <source src="media/hero-loop.mp4" type="video/mp4">
+      </video>
+      <img src="../img/hero.webp" alt="">
+    </div>
+    <div class="wrap">
+      <span class="live-pill"><span class="live-dot" aria-hidden="true"></span> LIVE · αποδεχόμαστε νέα έργα</span>
+      <span class="kicker"><i class="fa-solid fa-location-dot"></i> On-site & remote · Ελλάδα</span>
+      <h1>IT που κρατά την επιχείρηση <em>σε λειτουργία</em></h1>
+      <p class="lead">Δίκτυα, firewall, servers, backup και καθημερινή υποστήριξη για γραφεία και μικρομεσαίες επιχειρήσεις — χωρίς ακαταλαβίστικη ορολογία και χωρίς κρυφές χρεώσεις.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#services">Δείτε τις υπηρεσίες</a>
+        <a class="btn btn-ghost" href="contact.html">Δωρεάν αξιολόγηση</a>
+      </div>
+    </div>
+    <button class="vid-toggle" type="button" id="vidToggle" aria-pressed="false">Παύση video</button>
+  </section>
+
+  <main class="wrap">
+    <div class="trust" style="margin-top:28px;">
+      <div><b>5+ έτη</b><span>σε εταιρικά δίκτυα & ασφάλεια</span></div>
+      <div><b>Ελλάδα</b><span>on-site όπου χρειάζεται, αλλιώς remote</span></div>
+      <div><b>Διαφάνεια</b><span>τιμή πριν την εργασία, όχι μετά</span></div>
+      <div><b>24/7</b><span>emergency για συμφωνημένες εταιρίες</span></div>
+    </div>
+
+    <section>
+      <div class="split">
+        <img src="../img/about.webp" alt="IT υποδομή">
+        <div>
+          <div class="sec-h">
+            <h2>Δεν πουλάμε «πακέτα». Φτιάχνουμε την υποδομή που σας λείπει.</h2>
+            <p>Η FITSOLUTIONS αναλαμβάνει ό,τι συνήθως σπάει μια εργάσιμη: αργό Wi‑Fi, ανοιχτό δίκτυο, server χωρίς backup, κάμερες που «δεν γράφουν».</p>
+          </div>
+          <ul class="checks">
+            <li><i class="fa-solid fa-check"></i> Σχεδιασμός και εγκατάσταση, όχι μόνο απομακρυσμένο troubleshooting</li>
+            <li><i class="fa-solid fa-check"></i> Εξοπλισμός που ήδη δουλεύουμε: UniFi, WatchGuard, pfSense, Veeam, Hikvision</li>
+            <li><i class="fa-solid fa-check"></i> Καθαρή πρόταση πριν ξεκινήσουμε — τι θα γίνει, τι κοστίζει, τι παραδίδεται</li>
+          </ul>
+          <a class="btn" href="contact.html">Πείτε μας τι σας καθυστερεί</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="sec-h center">
+        <h2>Υπηρεσίες</h2>
+        <p>Έξι τομείς, ένα σημείο ευθύνης. Πατάτε και βλέπετε τι περιλαμβάνει το καθένα.</p>
+      </div>
+      <div class="grid-6">
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-wifi"></i></div>
+          <h3>Δίκτυα & Wi‑Fi</h3>
+          <p>Καλωδίωση, VLAN, VPN και εταιρικό Wi‑Fi που αντέχει πολλούς χρήστες χωρίς «νεκρές ζώνες».</p>
+          <p class="for">Για γραφεία, καταστήματα, αποθήκες</p>
+        </article>
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Firewall & ασφάλεια</h3>
+          <p>WatchGuard, pfSense, DrayTek, Fortinet: πολιτικές, VPN χρηστών και έλεγχος τι μπαίνει στο δίκτυο.</p>
+          <p class="for">Για όσους έχουν απομακρυσμένους υπαλλήλους ή POS</p>
+        </article>
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-server"></i></div>
+          <h3>Servers</h3>
+          <p>Windows / Linux, Active Directory, Hyper‑V και VMware. Καθαρή δομή χρηστών και δικαιωμάτων.</p>
+          <p class="for">Για εταιρίες που μεγάλωσαν από «έναν κοινόχρηστο φάκελο»</p>
+        </article>
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+          <h3>Backup</h3>
+          <p>Veeam και cloud αντίγραφα με δοκιμή επαναφοράς — backup που δεν ανακαλύπτετε ότι είναι άδειο την ημέρα της βλάβης.</p>
+          <p class="for">Για λογιστήρια, φακέλους πελατών, ERP</p>
+        </article>
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-video"></i></div>
+          <h3>CCTV</h3>
+          <p>Hikvision / Dahua: σωστή κάλυψη χώρου, αποθήκευση και απομακρυσμένη θέαση.</p>
+          <p class="for">Για καταστήματα, αποθήκες, εισόδους</p>
+        </article>
+        <article class="card">
+          <div class="icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>IT Support</h3>
+          <p>On-site και remote. Συντήρηση, βλάβες, ενημερώσεις — ώστε να μην είστε εσείς το helpdesk.</p>
+          <p class="for">Για σταθερή μηνιαία κάλυψη</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-h center">
+        <h2>Πώς δουλεύουμε</h2>
+        <p>Τέσσερα βήματα, χωρίς εκπλήξεις στο τιμολόγιο.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card step"><em>01</em><h3>Σύντομη κλήση</h3><p>Τι σας πονάει σήμερα: δίκτυο, ασφάλεια, backup ή όλα μαζί.</p></div>
+        <div class="card step"><em>02</em><h3>Αξιολόγηση</h3><p>On-site ή remote εικόνα της υφιστάμενης υποδομής.</p></div>
+        <div class="card step"><em>03</em><h3>Πρόταση</h3><p>Υλικό, εργασία, χρονοδιάγραμμα. Υπογράφετε πριν αγοραστεί οτιδήποτε.</p></div>
+        <div class="card step"><em>04</em><h3>Παράδοση & support</h3><p>Εγκατάσταση, τεκμηρίωση και συμφωνία συντήρησης αν τη θέλετε.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-h center">
+        <h2>Τεχνολογίες που εγκαθιστούμε</h2>
+        <p>Λιγότερα λογότυπα, πιο καθαρά — μόνο brands που πραγματικά δουλεύουμε.</p>
+      </div>
+      <div class="logos">
+        <figure><img src="../logos/UniFi-Logo.jpg" alt="UniFi"></figure>
+        <figure><img src="../logos/TP-Link-Logo-2003.png" alt="TP-Link"></figure>
+        <figure><img src="../logos/watchguard-logo.jpg" alt="WatchGuard"></figure>
+        <figure><img src="../logos/pfsense-logo-1024x538.png" alt="pfSense"></figure>
+        <figure><img src="../logos/Hikvision-Logo.png" alt="Hikvision"></figure>
+        <figure><img src="../logos/OIP.webp" alt="Veeam"></figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta">
+        <div>
+          <h2>Θέλετε μια καθαρή εικόνα της υποδομής σας;</h2>
+          <p>Στείλτε δύο γραμμές για το πρόβλημα. Απαντάμε εργάσιμες στο τηλέφωνο, email ή WhatsApp.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn" href="contact.html">Φόρμα επικοινωνίας</a>
+          <a class="btn btn-wa" href="https://wa.me/306947308511"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <div class="brand" style="margin-bottom:10px;color:#fff;">
+            <svg width="28" height="28" viewBox="0 0 36 36"><rect width="36" height="36" rx="10" fill="#2ec8e0"/><path d="M10 11h16v3.2H14.6V17h9.2v3.1H14.6V25H10V11z" fill="#061016"/></svg>
+            FITSOLUTIONS
+          </div>
+          IT υποδομές για επιχειρήσεις στην Ελλάδα.
+        </div>
+        <div>
+          <h4>Επικοινωνία</h4>
+          <p><a href="tel:6947308511">6947 308 511</a><br>
+          <a href="mailto:info@fitsolutions.gr">info@fitsolutions.gr</a><br>
+          Δευτ–Παρ 09:00–18:00 · Σάβ 10:00–14:00</p>
+        </div>
+        <div>
+          <h4>Νομικά</h4>
+          <p><a href="privacy.html">Πολιτική απορρήτου</a></p>
+        </div>
+      </div>
+      <p class="copy">© 2026 FITSOLUTIONS · Μακέτα για έγκριση · Video: Pexels</p>
+    </div>
+  </footer>
+
+  <a class="btn btn-wa wa-float" href="https://wa.me/306947308511" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <script>
+    const video = document.getElementById('heroVideo');
+    const toggle = document.getElementById('vidToggle');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches && video) {
+      video.pause();
+      toggle.hidden = true;
+    }
+    toggle?.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        toggle.textContent = 'Παύση video';
+        toggle.setAttribute('aria-pressed', 'false');
+      } else {
+        video.pause();
+        toggle.textContent = 'Play video';
+        toggle.setAttribute('aria-pressed', 'true');
+      }
+    });
+  </script>
+</body>
+</html>

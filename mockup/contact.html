@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Μακέτα επικοινωνίας – FITSOLUTIONS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="preview-bar">ΜΑΚΕΤΑ ΠΡΟΤΑΣΗΣ — φόρμα επικοινωνίας με GDPR. Δεν είναι το live site.</div>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <rect width="36" height="36" rx="10" fill="#2ec8e0"/>
+          <path d="M10 11h16v3.2H14.6V17h9.2v3.1H14.6V25H10V11z" fill="#061016"/>
+        </svg>
+        <span>FITSOLUTIONS</span>
+      </a>
+      <nav>
+        <a href="index.html">Αρχική</a>
+        <a href="index.html#services">Υπηρεσίες</a>
+        <a href="contact.html" class="on">Επικοινωνία</a>
+        <a class="btn" href="contact.html">Ζητήστε προσφορά</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-live short">
+    <div class="hero-media">
+      <video autoplay muted loop playsinline poster="../img/contact-hero.webp" aria-hidden="true">
+        <source src="media/hero-loop.mp4" type="video/mp4">
+      </video>
+      <img src="../img/contact-hero.webp" alt="">
+    </div>
+    <div class="wrap">
+      <span class="live-pill"><span class="live-dot" aria-hidden="true"></span> LIVE</span>
+      <span class="kicker"><i class="fa-solid fa-envelope"></i> Επικοινωνία</span>
+      <h1>Πείτε μας τι δεν δουλεύει</h1>
+      <p class="lead">Δύο γραμμές αρκούν. Αν είναι επείγον, καλέστε ή στείλτε WhatsApp — η φόρμα είναι για προσφορές και νέα έργα.</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section>
+      <div class="contact-grid">
+        <div>
+          <div class="info-row"><i class="fa-solid fa-phone"></i><div><strong style="color:#fff;">6947 308 511</strong><br>Δευτ–Παρ 09:00–18:00</div></div>
+          <div class="info-row"><i class="fa-brands fa-whatsapp"></i><div><a href="https://wa.me/306947308511">WhatsApp</a><br>Γρήγορα για βλάβες / ραντεβού</div></div>
+          <div class="info-row"><i class="fa-solid fa-envelope"></i><div><a href="mailto:info@fitsolutions.gr">info@fitsolutions.gr</a></div></div>
+          <div class="info-row"><i class="fa-solid fa-location-dot"></i><div>On-site όπου συμφωνηθεί · αλλιώς remote σε όλη την Ελλάδα</div></div>
+        </div>
+        <form action="#" method="post" onsubmit="event.preventDefault(); alert('Μακέτα: η φόρμα δεν στέλνει ακόμα.');">
+          <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="company" placeholder="Εταιρία (προαιρετικό)">
+          <input type="tel" name="phone" placeholder="Τηλέφωνο">
+          <select name="need">
+            <option value="">Τι σας απασχολεί;</option>
+            <option>Δίκτυο / Wi‑Fi</option>
+            <option>Firewall / ασφάλεια</option>
+            <option>Servers</option>
+            <option>Backup</option>
+            <option>CCTV</option>
+            <option>Μηνιαίο IT support</option>
+            <option>Άλλο</option>
+          </select>
+          <textarea name="message" placeholder="Π.χ. «Το Wi‑Fi πέφτει στο πίσω γραφείο, 12 άτομα, θέλουμε προσφορά.»" required></textarea>
+          <label class="gdpr">
+            <input type="checkbox" required>
+            <span>Συμφωνώ με την <a href="privacy.html" style="color:#2ec8e0;">πολιτική απορρήτου</a>. Τα στοιχεία χρησιμοποιούνται μόνο για απάντηση στο αίτημα.</span>
+          </label>
+          <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Αποστολή</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="copy">© 2026 FITSOLUTIONS · Μακέτα για έγκριση · <a href="privacy.html">Απόρρητο</a></p>
+    </div>
+  </footer>
+</body>
+</html>
