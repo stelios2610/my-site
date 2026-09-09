@@ -166,13 +166,21 @@ header nav a:hover, header nav a.on { color: #fff; }
   align-items: center;
   overflow: hidden;
 }
-.hero-media { position: absolute; inset: 0; }
-.hero-media video, .hero-media img {
+.hero-media { position: absolute; inset: 0; overflow: hidden; }
+.hero-media img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.06);
+  animation: heroZoom 24s ease-in-out infinite alternate;
+  will-change: transform;
+  backface-visibility: hidden;
 }
-.hero-media img { display: none; }
+@keyframes heroZoom {
+  from { transform: scale(1.04) translate3d(0, 0, 0); }
+  to { transform: scale(1.16) translate3d(-1.5%, 0, 0); }
+}
 .hero-media::after {
   content: "";
   position: absolute;
@@ -411,11 +419,9 @@ footer h4 { color: #fff; font-size: 0.75rem; letter-spacing: 0.1em; text-transfo
 .wa-float:hover { filter: brightness(1.08); }
 
 @media (prefers-reduced-motion: reduce) {
-  .live-dot { animation: none; }
-  .hero-media video,
-  .page-bg-video video { display: none; }
-  .hero-media img,
-  .page-bg-video img { display: block; }
+  .live-dot,
+  .hero-media img { animation: none; }
+  .hero-media img { transform: none; }
 }
 
 @media (max-width: 1120px) {
