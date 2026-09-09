@@ -167,15 +167,24 @@ header nav a:hover, header nav a.on { color: #fff; }
   overflow: hidden;
 }
 .hero-media { position: absolute; inset: 0; overflow: hidden; }
+.hero-media video,
 .hero-media img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+.hero-media .hero-fallback { display: none; }
+.hero-media.no-video video { display: none; }
+.hero-media.no-video .hero-fallback {
+  display: block;
   transform: scale(1.06);
   animation: heroZoom 24s ease-in-out infinite alternate;
   will-change: transform;
-  backface-visibility: hidden;
 }
 @keyframes heroZoom {
   from { transform: scale(1.04) translate3d(0, 0, 0); }
@@ -419,10 +428,21 @@ footer h4 { color: #fff; font-size: 0.75rem; letter-spacing: 0.1em; text-transfo
 .wa-float:hover { filter: brightness(1.08); }
 
 @media (prefers-reduced-motion: reduce) {
-  .live-dot,
-  .hero-media img { animation: none; }
-  .hero-media img { transform: none; }
+  .live-dot { animation: none; }
+  .hero-media video { display: none; }
+  .hero-media .hero-fallback {
+    display: block;
+    animation: none;
+    transform: none;
+  }
 }
+.copy .credit {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.copy .credit a { color: inherit; text-decoration: underline; }
 
 @media (max-width: 1120px) {
   .hamburger { display: grid; place-items: center; }
