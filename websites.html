@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=8">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
@@ -82,6 +82,10 @@
               <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
               <em>deigma-cafe.example</em>
             </div>
+            <!-- Unsplash License https://unsplash.com/license — not a client.
+                 img/sample-cafe-hero.webp https://images.unsplash.com/photo-1453614512568-c4024d13c247
+                 img/sample-cafe-cup.webp https://images.unsplash.com/photo-1495474472287-4d71bcdd2085
+                 img/sample-cafe-table.webp https://images.unsplash.com/photo-1445116572660-236099ec97a0 -->
             <div class="mock-site">
               <div class="m-nav">
                 <strong>Καφέ «Δείγμα»</strong>
@@ -89,19 +93,28 @@
                 <span>Ο χώρος</span>
                 <span>Επικοινωνία</span>
               </div>
-              <div class="m-hero">
-                <p class="m-kicker">Καφές γειτονιάς</p>
-                <h4>Ένας καφές, χωρίς βιασύνη</h4>
-                <span class="m-btn">Το μενού</span>
+              <div class="m-cover">
+                <img src="img/sample-cafe-hero.webp" alt="Πάγκος καφέ σε δείγμα ιστοσελίδας" width="1400" height="1166">
+                <div class="m-cover-copy">
+                  <p class="m-kicker">Καφές γειτονιάς</p>
+                  <h4>Ένας καφές, χωρίς βιασύνη</h4>
+                  <span class="m-btn">Το μενού</span>
+                </div>
               </div>
               <div class="m-cols">
-                <article>
-                  <h5>Το μενού</h5>
-                  <p>Εσπρέσο, φίλτρου και κάτι γλυκό για το μεσημέρι.</p>
+                <article class="m-shot">
+                  <img src="img/sample-cafe-cup.webp" alt="Καφέδες σε δείγμα ιστοσελίδας" width="1100" height="734">
+                  <div>
+                    <h5>Το μενού</h5>
+                    <p>Εσπρέσο, φίλτρου και κάτι γλυκό για το μεσημέρι.</p>
+                  </div>
                 </article>
-                <article>
-                  <h5>Ωράριο</h5>
-                  <p>Καθημερινά πρωί ως απόγευμα. Κλειστά την Κυριακή.</p>
+                <article class="m-shot">
+                  <img src="img/sample-cafe-table.webp" alt="Τραπέζι καφέ σε δείγμα ιστοσελίδας" width="1100" height="734">
+                  <div>
+                    <h5>Ο χώρος</h5>
+                    <p>Καθημερινά πρωί ως απόγευμα. Κλειστά την Κυριακή.</p>
+                  </div>
                 </article>
               </div>
             </div>
@@ -121,6 +134,9 @@
               <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
               <em>paradeigma-office.example</em>
             </div>
+            <!-- Unsplash License https://unsplash.com/license — not a client.
+                 img/sample-office-books.webp https://images.unsplash.com/photo-1505664194779-8beaceb93744
+                 img/sample-office-desk.webp https://images.unsplash.com/photo-1454165804606-c3d57bc86b40 -->
             <div class="mock-site">
               <div class="m-nav">
                 <strong>Παράδειγμα</strong>
@@ -128,17 +144,21 @@
                 <span>Τομείς</span>
                 <span>Επικοινωνία</span>
               </div>
-              <div class="m-hero">
-                <p class="m-kicker">Δικηγορικό γραφείο</p>
-                <h4>Σαφής παρουσία, χωρίς περιττά</h4>
-                <span class="m-btn">Κλείστε ραντεβού</span>
+              <div class="m-cover m-cover-law">
+                <img src="img/sample-office-books.webp" alt="Βιβλιοθήκη γραφείου σε δείγμα ιστοσελίδας" width="1400" height="934">
+                <div class="m-cover-copy">
+                  <p class="m-kicker">Δικηγορικό γραφείο</p>
+                  <h4>Σαφής παρουσία, χωρίς περιττά</h4>
+                  <span class="m-btn">Κλείστε ραντεβού</span>
+                </div>
               </div>
-              <div class="m-cols">
-                <article>
+              <div class="m-cols m-pair">
+                <article class="m-shot m-shot-fill">
+                  <img src="img/sample-office-desk.webp" alt="Συνάντηση στο γραφείο, φωτογραφία δείγματος" width="1100" height="734">
+                </article>
+                <article class="m-note">
                   <h5>Το γραφείο</h5>
                   <p>Μικρή ομάδα και σταθερά ραντεβού, χωρίς ουρές.</p>
-                </article>
-                <article>
                   <h5>Τομείς</h5>
                   <p>Συμβόλαια, εταιρικά θέματα και ακίνητα.</p>
                 </article>
@@ -160,6 +180,9 @@
               <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
               <em>deigma-services.example</em>
             </div>
+            <!-- Unsplash License https://unsplash.com/license — not a client.
+                 img/sample-trade-hero.webp https://images.unsplash.com/photo-1621905251189-08b45d6a269e
+                 img/sample-trade-tools.webp https://images.unsplash.com/photo-1530124566582-a618bc2615dc -->
             <div class="mock-site">
               <div class="m-nav">
                 <strong>Δείγμα Τεχνική</strong>
@@ -167,17 +190,21 @@
                 <span>Περιοχή</span>
                 <span>Επικοινωνία</span>
               </div>
-              <div class="m-hero">
-                <p class="m-kicker">Τεχνικές υπηρεσίες</p>
-                <h4>Υδραυλικά και ηλεκτρολογικά, στην ώρα τους</h4>
-                <span class="m-btn">Ζητήστε επίσκεψη</span>
+              <div class="m-cover m-cover-trade">
+                <img src="img/sample-trade-hero.webp" alt="Ηλεκτρολόγος σε δείγμα ιστοσελίδας" width="1400" height="934">
+                <div class="m-cover-copy">
+                  <p class="m-kicker">Τεχνικές υπηρεσίες</p>
+                  <h4>Υδραυλικά και ηλεκτρολογικά, στην ώρα τους</h4>
+                  <span class="m-btn">Ζητήστε επίσκεψη</span>
+                </div>
               </div>
-              <div class="m-cols">
-                <article>
+              <div class="m-cols m-pair">
+                <article class="m-shot m-shot-fill">
+                  <img src="img/sample-trade-tools.webp" alt="Εργαλεία τεχνικής υπηρεσίας, φωτογραφία δείγματος" width="1100" height="612">
+                </article>
+                <article class="m-note">
                   <h5>Τι αναλαμβάνουμε</h5>
                   <p>Βλάβες, μικρές εγκαταστάσεις και επισκευές.</p>
-                </article>
-                <article>
                   <h5>Περιοχή</h5>
                   <p>Στην πόλη και στα γύρω προάστια.</p>
                 </article>

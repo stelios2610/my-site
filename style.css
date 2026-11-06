@@ -687,7 +687,79 @@ header { position: sticky; }
 .mock-trade .m-btn { background: #fff; color: #1f6b4a; }
 .mock-trade .m-cols article { background: #fff; border: 1px solid #d7e4dc; }
 
+.m-cover {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  padding: 0;
+}
+.m-cover > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+.m-cover-trade > img { object-position: 28% center; }
+.m-cover-copy {
+  position: relative;
+  z-index: 1;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 24px 22px 22px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 18%, rgba(28, 14, 6, 0.78) 100%);
+}
+.m-cover-copy h4 { color: #fff; margin: 0; max-width: 16em; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35); }
+.m-cover .m-kicker { color: #ffe7c2; margin: 0; }
+.m-cover-law .m-cover-copy {
+  background: linear-gradient(90deg, rgba(8, 12, 22, 0.9) 0%, rgba(8, 12, 22, 0.72) 36%, rgba(8, 12, 22, 0.15) 64%, rgba(8, 12, 22, 0.02) 100%);
+}
+.m-cover-law .m-cover-copy h4 { max-width: 11em; }
+.m-cover-law .m-kicker { color: #d4b15a; }
+.m-cover-trade .m-cover-copy {
+  background: linear-gradient(180deg, rgba(8, 28, 20, 0) 28%, rgba(6, 24, 16, 0.82) 100%);
+}
+.m-cover-trade .m-kicker { color: #d7f5e4; }
+.mock-cafe .m-cover .m-btn { background: #fffaf4; color: #3d2914; }
+.mock-law .m-cover .m-btn {
+  background: transparent;
+  color: #d4b15a;
+  border: 1px solid #d4b15a;
+  border-radius: 0;
+}
+.mock-trade .m-cover .m-btn { background: #fff; color: #1f6b4a; }
+.m-cols article.m-shot { padding: 0; overflow: hidden; }
+.m-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  border-left: 3px solid currentColor;
+}
+.mock-law .m-note { border-left-color: #d4b15a; }
+.mock-trade .m-note { border-left-color: #1f6b4a; }
+.m-shot img {
+  width: 100%;
+  height: 168px;
+  object-fit: cover;
+}
+.m-pair { grid-template-columns: 1.35fr 0.85fr; }
+.m-shot-fill,
+.m-shot-fill img { height: 230px; min-height: 0; }
+.m-shot div { padding: 12px 14px 14px; }
+.mock-cafe .m-shot { background: #fffaf4; }
+.mock-law .m-shot { background: #fff; }
+.mock-trade .m-shot { background: #fff; }
+
 @media (max-width: 560px) {
   .sample-top { flex-direction: column; }
   .m-cols { grid-template-columns: 1fr; }
+  .m-cover, .m-cover-copy { min-height: 240px; }
+  .m-shot img { height: 180px; }
 }
