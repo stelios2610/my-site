@@ -1,22 +1,19 @@
 /**
- * FITSOLUTIONS – Ticket mail handler (Google Apps Script)
+ * FITSOLUTIONS – Ticket mail FROM info@fitsolutions.gr
  *
- * SETUP (κάνε το με λογαριασμό info@fitsolutions.gr):
- * 1) https://script.google.com → New project
- * 2) Κόλλα αυτό το αρχείο, Save
- * 3) Deploy → New deployment → Type: Web app
- *    - Execute as: Me
- *    - Who has access: Anyone
- * 4) Αντίγραψε το Web app URL
- * 5) Βάλ’ το στο ticket.html ως TICKET_ENDPOINT
+ * Τρέξε το ΜΟΝΟ ενώ είσαι συνδεδεμένος ως info@fitsolutions.gr
+ * (Google Workspace ή Gmail).
  *
- * Αποτέλεσμα:
- * - Εσύ παίρνεις το ticket στο info@fitsolutions.gr
- * - Ο πελάτης παίρνει αγγλική επιβεβαίωση FROM info@fitsolutions.gr
+ * Deploy → New deployment → Web app
+ *   Execute as: Me
+ *   Who has access: Anyone
+ *
+ * Μετά στείλε το Web app URL στον agent να το βάλει στο ticket.html
  */
 
 var TEAM_TO = 'info@fitsolutions.gr';
 var FROM_NAME = 'FITSOLUTIONS';
+var THANKS_URL = 'https://fitsolutions.gr/ticket-thanks.html';
 
 function doPost(e) {
   try {
@@ -31,49 +28,45 @@ function doPost(e) {
     var message = String(p.message || '').trim();
 
     if (!email || !message) {
-      return json_({ ok: false, error: 'missing_fields' });
+      return page_('Missing email or message.', false);
     }
-
-    var ticketBody =
-      'New IT Support ticket\n\n' +
-      'Name: ' + name + '\n' +
-      'Company: ' + company + '\n' +
-      'Email: ' + email + '\n' +
-      'Phone: ' + phone + '\n' +
-      'Urgency: ' + urgency + '\n' +
-      'Remote OK: ' + remoteOk + '\n' +
-      'Device: ' + device + '\n\n' +
-      'Message:\n' + message + '\n';
 
     MailApp.sendEmail({
       to: TEAM_TO,
       replyTo: email,
       name: FROM_NAME,
       subject: 'New IT Support Ticket – ' + (name || email),
-      body: ticketBody
+      body:
+        'New IT Support ticket\n\n' +
+        'Name: ' + name + '\n' +
+        'Company: ' + company + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + phone + '\n' +
+        'Urgency: ' + urgency + '\n' +
+        'Remote OK: ' + remoteOk + '\n' +
+        'Device: ' + device + '\n\n' +
+        'Message:\n' + message + '\n'
     });
-
-    var clientBody =
-      'Hello' + (name ? ' ' + name.split(' ')[0] : '') + ',\n\n' +
-      'Your support ticket has been opened and is being reviewed by our team. ' +
-      'We will update you shortly.\n\n' +
-      'If this is urgent, call +30 6947 308 511.\n\n' +
-      '—\n' +
-      'FITSOLUTIONS\n' +
-      'info@fitsolutions.gr\n' +
-      'https://fitsolutions.gr\n';
 
     MailApp.sendEmail({
       to: email,
       replyTo: TEAM_TO,
       name: FROM_NAME,
       subject: 'Your ticket has been opened – FITSOLUTIONS',
-      body: clientBody
+      body:
+        'Hello' + (name ? ' ' + name.split(/\s+/)[0] : '') + ',\n\n' +
+        'Your support ticket has been opened and is being reviewed by our team. ' +
+        'We will update you shortly.\n\n' +
+        'If this is urgent, call +30 6947 308 511.\n\n' +
+        '—\n' +
+        'FITSOLUTIONS\n' +
+        'info@fitsolutions.gr\n' +
+        'https://fitsolutions.gr\n'
     });
 
-    return json_({ ok: true });
+    return page_('OK', true);
   } catch (err) {
-    return json_({ ok: false, error: String(err) });
+    return page_('Error: ' + err, false);
   }
 }
 
@@ -83,8 +76,13 @@ function doGet() {
     .setMimeType(ContentService.MimeType.TEXT);
 }
 
-function json_(obj) {
-  return ContentService
-    .createTextOutput(JSON.stringify(obj))
-    .setMimeType(ContentService.MimeType.JSON);
+function page_(msg, ok) {
+  var html = ok
+    ? '<!DOCTYPE html><html><head><meta charset="utf-8">' +
+      '<meta http-equiv="refresh" content="0;url=' + THANKS_URL + '">' +
+      '<script>location.replace(' + JSON.stringify(THANKS_URL) + ');</script>' +
+      '</head><body>Ticket sent. Redirecting…</body></html>'
+    : '<!DOCTYPE html><html><head><meta charset="utf-8"></head><body>' +
+      '<p>' + msg + '</p><p><a href="https://fitsolutions.gr/ticket.html">Back</a></p></body></html>';
+  return HtmlService.createHtmlOutput(html);
 }

@@ -82,11 +82,11 @@
         </div>
       </div>
 
-      <form class="form-card" action="https://formsubmit.co/info@fitsolutions.gr" method="POST">
-        <input type="hidden" name="_subject" value="New IT Support Ticket – FITSOLUTIONS">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://fitsolutions.gr/ticket-thanks.html">
-        <input type="hidden" name="_autoresponse" value="Hello,
+      <form class="form-card" id="ticket-form" action="https://formsubmit.co/info@fitsolutions.gr" method="POST">
+        <input data-provider="formsubmit" type="hidden" name="_subject" value="New IT Support Ticket – FITSOLUTIONS">
+        <input data-provider="formsubmit" type="hidden" name="_template" value="table">
+        <input data-provider="formsubmit" type="hidden" name="_next" value="https://fitsolutions.gr/ticket-thanks.html">
+        <input data-provider="formsubmit" type="hidden" name="_autoresponse" value="Hello,
 
 Your support ticket has been opened and is being reviewed by our team. We will update you shortly.
 
@@ -189,6 +189,18 @@ https://fitsolutions.gr">
   </footer>
   <a class="wa-float" href="https://wa.me/306947308511" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
   <script src="site.js?v=4"></script>
+  <script src="ticket-config.js"></script>
+  <script>
+    (function () {
+      var endpoint = window.FITSOLUTIONS_TICKET_ENDPOINT || '';
+      var form = document.getElementById('ticket-form');
+      if (!form || !endpoint) return;
+      form.action = endpoint;
+      form.querySelectorAll('[data-provider="formsubmit"]').forEach(function (el) {
+        el.remove();
+      });
+    })();
+  </script>
 </body>
 </html>
 

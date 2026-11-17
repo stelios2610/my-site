@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Ticket email setup – FITSOLUTIONS</title>
+  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+  <main class="wrap" style="padding:48px 0 80px;max-width:760px;">
+    <span class="kicker">Internal setup</span>
+    <h1 style="margin:12px 0 16px;font-size:2rem;">Mail από info@ στα ticket</h1>
+    <p class="lead" style="margin-bottom:28px;">
+      Το FormSubmit / Formspree <strong>δεν μπορούν</strong> να στείλουν ως <code>info@fitsolutions.gr</code>.
+      Χρειάζεται Google Apps Script με login στο info@.
+    </p>
+
+    <div class="card" style="margin-bottom:18px;">
+      <h2 style="margin-bottom:10px;">Προϋπόθεση</h2>
+      <p style="color:var(--muted);">Το <code>info@fitsolutions.gr</code> πρέπει να είναι <strong>Google Workspace</strong> ή Gmail. Αν είναι cPanel/άλλος πάροχος, πες το στον agent.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:18px;">
+      <h2 style="margin-bottom:10px;">Βήματα</h2>
+      <ol style="color:var(--muted);padding-left:1.2rem;display:grid;gap:10px;">
+        <li>Άνοιξε Chrome και κάνε login ως <strong>info@fitsolutions.gr</strong></li>
+        <li>Πήγαινε: <a href="https://script.google.com/home/projects/create" style="color:var(--cyan);">script.google.com → New project</a></li>
+        <li>Σβήσε τον default κώδικα και κόλλα όλο το αρχείο:
+          <a href="scripts/ticket-mail.gs" style="color:var(--cyan);">scripts/ticket-mail.gs</a>
+        </li>
+        <li>Save (δισκέτα) — όνομα π.χ. <code>FITSOLUTIONS Tickets</code></li>
+        <li><strong>Deploy</strong> → <strong>New deployment</strong></li>
+        <li>Εικονίδιο γραναζιού δίπλα στο Select type → <strong>Web app</strong></li>
+        <li>Description: <code>tickets</code></li>
+        <li>Execute as: <strong>Me (info@fitsolutions.gr)</strong></li>
+        <li>Who has access: <strong>Anyone</strong></li>
+        <li>Deploy →Authorize / Allow</li>
+        <li>Αντιγράψε το <strong>Web app URL</strong> (τελειώνει σε <code>/exec</code>)</li>
+        <li>Στείλ’ το στο Cursor chat</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-bottom:10px;">Τι θα γίνει μετά</h2>
+      <p style="color:var(--muted);">Ο agent βάζει το URL στη φόρμα ticket. Τότε:</p>
+      <ul class="about-points" style="margin-top:12px;">
+        <li><i class="fa-solid fa-check"></i> Εσύ παίρνεις το ticket στο info@</li>
+        <li><i class="fa-solid fa-check"></i> Ο πελάτης παίρνει αγγλικό mail <strong>From: info@fitsolutions.gr</strong></li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
