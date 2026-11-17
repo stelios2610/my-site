@@ -61,7 +61,7 @@
       <div class="contact-copy">
         <span class="live-pill"><span class="live-dot" aria-hidden="true"></span> TICKET DESK</span>
         <h1 class="page-h1">Άνοιγμα IT ticket</h1>
-        <p class="lead">Περιγράψτε τι δεν δουλεύει. Μόλις σταλεί η φόρμα, έρχεται ειδοποίηση στο email μας και το αναλαμβάνουμε.</p>
+        <p class="lead">Περιγράψτε τι δεν δουλεύει. Θα λάβετε επιβεβαίωση στο email σας από <strong>info@fitsolutions.gr</strong> και η ομάδα μας θα εξετάσει το ticket.</p>
         <div class="ico-list">
           <div class="ico-row">
             <div class="ico"><i class="fa-solid fa-bolt"></i></div>
@@ -82,9 +82,7 @@
         </div>
       </div>
 
-      <form class="form-card" action="https://formspree.io/f/xlgwavyy" method="POST">
-        <input type="hidden" name="form_type" value="it_support_ticket">
-        <input type="hidden" name="_subject" value="Νέο IT Support Ticket – FITSOLUTIONS">
+      <form class="form-card" id="ticket-form" novalidate>
         <div class="form-grid">
           <div class="field">
             <label for="t-name">Ονοματεπώνυμο</label>
@@ -130,11 +128,12 @@
             <textarea id="t-message" name="message" required placeholder="Τι συνέβη, από πότε, μήνυμα σφάλματος αν υπάρχει"></textarea>
           </div>
           <label class="gdpr full">
-            <input type="checkbox" required>
+            <input id="t-gdpr" type="checkbox" required>
             <span>Συμφωνώ με την <a href="privacy.html">πολιτική απορρήτου</a></span>
           </label>
           <div class="field full">
-            <button class="btn btn-wide" type="submit"><i class="fa-solid fa-ticket"></i> Αποστολή ticket</button>
+            <button class="btn btn-wide" id="ticket-submit" type="submit"><i class="fa-solid fa-ticket"></i> Αποστολή ticket</button>
+            <p id="ticket-status" class="price-note" style="margin-top:12px;text-align:left;" hidden></p>
           </div>
         </div>
       </form>
@@ -178,5 +177,46 @@
   </footer>
   <a class="wa-float" href="https://wa.me/306947308511" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
   <script src="site.js?v=4"></script>
+  <script>
+    // Paste the Google Apps Script Web App URL here (deployed as info@fitsolutions.gr)
+    const TICKET_ENDPOINT = '';
+
+    (function () {
+      const form = document.getElementById('ticket-form');
+      const status = document.getElementById('ticket-status');
+      const btn = document.getElementById('ticket-submit');
+      if (!form) return;
+
+      form.addEventListener('submit', async (ev) => {
+        ev.preventDefault();
+        status.hidden = false;
+
+        if (!TICKET_ENDPOINT) {
+          status.textContent = 'Η αποστολή από info@fitsolutions.gr ρυθμίζεται τώρα. Προς το παρόν στείλτε WhatsApp στο 6947 308 511 ή email στο info@fitsolutions.gr.';
+          return;
+        }
+
+        if (!form.reportValidity()) return;
+
+        btn.disabled = true;
+        status.textContent = 'Αποστολή ticket...';
+
+        try {
+          await fetch(TICKET_ENDPOINT, {
+            method: 'POST',
+            body: new FormData(form),
+            mode: 'no-cors'
+          });
+          form.reset();
+          status.textContent = 'Το ticket στάλθηκε. Θα λάβετε επιβεβαίωση στα αγγλικά από info@fitsolutions.gr.';
+        } catch (err) {
+          status.textContent = 'Κάτι πήγε στραβά. Καλέστε 6947 308 511 ή στείλτε WhatsApp.';
+        } finally {
+          btn.disabled = false;
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
+
