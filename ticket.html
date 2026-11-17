@@ -61,7 +61,7 @@
       <div class="contact-copy">
         <span class="live-pill"><span class="live-dot" aria-hidden="true"></span> TICKET DESK</span>
         <h1 class="page-h1">Άνοιγμα IT ticket</h1>
-        <p class="lead">Περιγράψτε τι δεν δουλεύει. Θα λάβετε αγγλική επιβεβαίωση στο email σας· η ομάδα μας εξετάζει το ticket και θα σας ενημερώσει.</p>
+        <p class="lead">Περιγράψτε τι δεν δουλεύει. Μόλις σταλεί η φόρμα, έρχεται ειδοποίηση στο email μας και το αναλαμβάνουμε.</p>
         <div class="ico-list">
           <div class="ico-row">
             <div class="ico"><i class="fa-solid fa-bolt"></i></div>
@@ -82,20 +82,9 @@
         </div>
       </div>
 
-      <form class="form-card" id="ticket-form" action="https://formsubmit.co/info@fitsolutions.gr" method="POST">
-        <input data-provider="formsubmit" type="hidden" name="_subject" value="New IT Support Ticket – FITSOLUTIONS">
-        <input data-provider="formsubmit" type="hidden" name="_template" value="table">
-        <input data-provider="formsubmit" type="hidden" name="_next" value="https://fitsolutions.gr/ticket-thanks.html">
-        <input data-provider="formsubmit" type="hidden" name="_autoresponse" value="Hello,
-
-Your support ticket has been opened and is being reviewed by our team. We will update you shortly.
-
-If this is urgent, call +30 6947 308 511.
-
-—
-FITSOLUTIONS
-info@fitsolutions.gr
-https://fitsolutions.gr">
+      <form class="form-card" action="https://formspree.io/f/xlgwavyy" method="POST">
+        <input type="hidden" name="form_type" value="it_support_ticket">
+        <input type="hidden" name="_subject" value="Νέο IT Support Ticket – FITSOLUTIONS">
         <div class="form-grid">
           <div class="field">
             <label for="t-name">Ονοματεπώνυμο</label>
@@ -189,18 +178,5 @@ https://fitsolutions.gr">
   </footer>
   <a class="wa-float" href="https://wa.me/306947308511" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
   <script src="site.js?v=4"></script>
-  <script src="ticket-config.js"></script>
-  <script>
-    (function () {
-      var endpoint = window.FITSOLUTIONS_TICKET_ENDPOINT || '';
-      var form = document.getElementById('ticket-form');
-      if (!form || !endpoint) return;
-      form.action = endpoint;
-      form.querySelectorAll('[data-provider="formsubmit"]').forEach(function (el) {
-        el.remove();
-      });
-    })();
-  </script>
 </body>
 </html>
-
